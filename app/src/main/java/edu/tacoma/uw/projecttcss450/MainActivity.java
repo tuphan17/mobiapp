@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        Button parkingButton = findViewById(R.id.parking);
+        Button parkingButton = findViewById(R.id.ParkingButton);
         parkingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button aboutButton = findViewById(R.id.button_about_me);
+        Button aboutButton = findViewById(R.id.AboutButton);
         aboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

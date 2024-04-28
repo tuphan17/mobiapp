@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/parking"
+        android:id="@+id/ParkingButton"
         android:layout_width="128dp"
         android:layout_height="52dp"
         android:layout_marginStart="32dp"
@@ -50,7 +50,7 @@
         app:layout_constraintVertical_bias="0.708" />
 
     <Button
-        android:id="@+id/button_about_me"
+        android:id="@+id/AboutButton"
         android:layout_width="131dp"
         android:layout_height="50dp"
         android:layout_marginStart="14dp"
