@@ -41,5 +41,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button campusButton = findViewById(R.id.CampusMapButton);
+        campusButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CampusMap.class);
+                startActivity(intent);
+            }
+        });
     }
 }
