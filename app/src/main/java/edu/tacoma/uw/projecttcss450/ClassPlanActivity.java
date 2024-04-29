@@ -21,8 +21,9 @@ public class ClassPlanActivity extends AppCompatActivity {
             return insets;
         });
 
-        String FreshManButton = getString(R.string.Fresh_button);
-        String TransferStudent = getString(R.string.Transfer_button);
-        String Graduation = getString(R.string.Graduation_button);
+        String freshMan = getString(R.string.Fresh_button);
+        String transfer = getString(R.string.Transfer_button);
+        String graduation = getString(R.string.Graduation_button);
+
     }
 }
