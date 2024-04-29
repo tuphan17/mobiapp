@@ -12,4 +12,5 @@
     <!--    <string name="Developer1_email">dinhtu@uw.edu</string>-->
     <string name="Class_button">Class plan</string>
     <string name="Map_button">Campus Map</string>
+    <string name="ClickToCampusMap">Click Here To Open Interactive Campus Map</string>
 </resources>
