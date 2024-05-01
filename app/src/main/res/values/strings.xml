@@ -13,4 +13,7 @@
     <string name="Class_button">Class plan</string>
     <string name="Map_button">Campus Map</string>
     <string name="ClickToCampusMap">Click Here To Open Interactive Campus Map</string>
+    <string name="Fresh_button">Fresh man</string>
+    <string name="Transfer_button">Transfer student</string>
+    <string name="Graduation_button">Graduation</string>
 </resources>

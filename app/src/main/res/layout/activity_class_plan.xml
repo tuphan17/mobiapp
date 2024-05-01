@@ -5,60 +5,59 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AboutActivity">
+    tools:context=".ClassPlanActivity">
 
-    <TextView
-        android:id="@+id/textView"
+    <Button
+        android:id="@+id/FreshmanButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="307dp"
-        android:layout_marginEnd="154dp"
-        android:text="@string/Developer1_info"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="227dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="66dp"
+        android:text="@string/Fresh_button"
+        app:layout_constraintBottom_toTopOf="@+id/TransferButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <Button
+        android:id="@+id/TransferButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="91dp"
-        android:layout_marginBottom="50dp"
-        android:text="@string/Developer2_info"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        android:layout_marginStart="160dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="83dp"
+        android:text="@string/Transfer_button"
+        app:layout_constraintBottom_toTopOf="@+id/Graduation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/FreshmanButton" />
 
-    <TextView
-        android:id="@+id/textView3"
+    <Button
+        android:id="@+id/Graduation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginBottom="266dp"
-        android:text="@string/Developer3_info"
+        android:layout_marginStart="160dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="211dp"
+        android:text="@string/Graduation_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/TransferButton" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="25dp"
-        android:layout_marginBottom="88dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/FreshmanButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/logo" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
