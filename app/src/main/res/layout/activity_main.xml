@@ -8,61 +8,54 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/parking"
-        android:layout_width="128dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="65dp"
-        android:layout_marginBottom="81dp"
+        android:id="@+id/ParkingButton"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="140dp"
         android:text="Parking"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ClassPlanButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
         android:id="@+id/ClassPlanButton"
-        android:layout_width="131dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="65dp"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="140dp"
         android:text="@string/Class_button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/CampusMapButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.527"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.844" />
+        app:layout_constraintTop_toBottomOf="@+id/ParkingButton" />
 
     <Button
         android:id="@+id/CampusMapButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="140dp"
         android:text="@string/Map_button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/AboutButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.539"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.708" />
+        app:layout_constraintTop_toBottomOf="@+id/ClassPlanButton" />
 
     <Button
-        android:id="@+id/button_about_me"
-        android:layout_width="131dp"
+        android:id="@+id/AboutButton"
+        android:layout_width="140dp"
         android:layout_height="50dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="7dp"
-        android:onClick="onButtonClick"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="22dp"
         android:text="About"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931" />
+        app:layout_constraintTop_toBottomOf="@+id/CampusMapButton" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -73,10 +66,10 @@
         android:layout_marginBottom="65dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.532"
+        app:layout_constraintVertical_bias="0.539"
         app:srcCompat="@mipmap/coolpicutre" />
 
     <ImageView
@@ -85,10 +78,10 @@
         android:layout_height="146dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.594"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.08"
+        app:layout_constraintVertical_bias="0.082"
         app:srcCompat="@mipmap/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
