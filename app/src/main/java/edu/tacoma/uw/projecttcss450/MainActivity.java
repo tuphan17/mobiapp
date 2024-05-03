@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         parkingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Parking.class);
+                Intent intent = new Intent(MainActivity.this, ParkingActivity.class);
                 startActivity(intent);
             }
         });
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         campusButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CampusMap.class);
+                Intent intent = new Intent(MainActivity.this, CampusMapActivity.class);
                 startActivity(intent);
             }
         });

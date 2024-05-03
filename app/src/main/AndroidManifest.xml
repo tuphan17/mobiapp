@@ -19,7 +19,7 @@
             android:name=".ClassPlan"
             android:exported="false" />
         <activity
-            android:name=".Parking"
+            android:name=".ParkingActivity"
             android:exported="false" />
         <activity
             android:name=".AboutMe"
@@ -29,7 +29,7 @@
             android:exported="false"
             android:label="@string/title_activity_about" />
         <activity
-            android:name=".CampusMap"
+            android:name=".CampusMapActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
