@@ -8,44 +8,44 @@
     tools:context=".ClassPlanActivity">
 
     <Button
-        android:id="@+id/FreshmanButton"
+        android:id="@+id/ApplyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
         android:layout_marginTop="227dp"
         android:layout_marginEnd="160dp"
         android:layout_marginBottom="66dp"
-        android:text="@string/Fresh_button"
-        app:layout_constraintBottom_toTopOf="@+id/TransferButton"
+        android:text="@string/To_Apply"
+        app:layout_constraintBottom_toTopOf="@+id/GraduationButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/TransferButton"
+        android:id="@+id/GraduationButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
         android:layout_marginEnd="160dp"
         android:layout_marginBottom="83dp"
-        android:text="@string/Transfer_button"
-        app:layout_constraintBottom_toTopOf="@+id/Graduation"
+        android:text="@string/To_Graduate"
+        app:layout_constraintBottom_toTopOf="@+id/myPlanButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FreshmanButton" />
+        app:layout_constraintTop_toBottomOf="@+id/ApplyButton" />
 
     <Button
-        android:id="@+id/Graduation"
+        android:id="@+id/myPlanButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
         android:layout_marginEnd="160dp"
         android:layout_marginBottom="211dp"
-        android:text="@string/Graduation_button"
+        android:text="@string/Class_Plan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TransferButton" />
+        app:layout_constraintTop_toBottomOf="@+id/GraduationButton" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -55,7 +55,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/FreshmanButton"
+        app:layout_constraintBottom_toTopOf="@+id/ApplyButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

@@ -12,7 +12,13 @@
     <!--    <string name="Developer1_email">dinhtu@uw.edu</string>-->
     <string name="Class_button">Class plan</string>
     <string name="Map_button">Campus Map</string>
-    <string name="Fresh_button">Fresh man</string>
-    <string name="Transfer_button">Transfer student</string>
-    <string name="Graduation_button">Graduation</string>
+    <string name="To_Apply">To Apply</string>
+    <string name="To_Graduate">To Graduate</string>
+    <string name="Class_Plan">Class Plan</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="edit_Add_Course_hint">Add Your Course</string>
+    <string name="button_ADD">Add</string>
+    <string name="edit_Delete_Course_hint">Delete Your Course</string>
+    <string name="button_Delete">Delete</string>
 </resources>
