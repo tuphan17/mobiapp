@@ -1,6 +1,9 @@
 package edu.tacoma.uw.projecttcss450;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,7 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class CampusMap extends AppCompatActivity {
+public class CampusMapActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +23,15 @@ public class CampusMap extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        findViewById(R.id.clickherebutton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri webpage = Uri.parse("https://www.tacoma.uw.edu/campus-map");
+                Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
+                startActivity(webIntent);
+            }
+        });
     }
+
 }
