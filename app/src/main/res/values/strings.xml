@@ -16,4 +16,5 @@
     <string name="Fresh_button">Fresh man</string>
     <string name="Transfer_button">Transfer student</string>
     <string name="Graduation_button">Graduation</string>
+    <string name="About_Information">This application goes through some of the basic information to guide freshman students in CS majors at University of Washington Tacoma.</string>
 </resources>
