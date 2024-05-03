@@ -8,21 +8,29 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ParkingActivity extends AppCompatActivity {
 
+    private String[] parkingLocations = {
+            "Court 17 Parking Garage",
+            "Tacoma Dome Station Parking Garage",
+            "Broadway Parking Garage",
+            "Market Street Parking Garage",
+            "Pacific Avenue Parking Garage"
+    };
+
+    private int[] parkingImages = {
+            R.drawable.court_17_parking,
+            R.drawable.tacoma_dome_parking,
+            R.drawable.broadway_parking,
+            R.drawable.market_street_parking,
+            R.drawable.pacific_avenue_parking
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parking);
 
-        // Initialize the ListView and set the adapter
         ListView listView = findViewById(R.id.parking_list);
-        String[] parkingLocations = {
-                "Court 17 ParkingActivity Garage",
-                "Tacoma Dome Station ParkingActivity Garage",
-                "Broadway ParkingActivity Garage",
-                "Market Street ParkingActivity Garage",
-                "Pacific Avenue ParkingActivity Garage"
-        };
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, parkingLocations);
+        ParkingAdapter adapter = new ParkingAdapter(this, parkingLocations, parkingImages);
         listView.setAdapter(adapter);
     }
 }
