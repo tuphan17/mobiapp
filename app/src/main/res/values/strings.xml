@@ -4,18 +4,14 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="Developer3_info">Name: Junghyon Jo Email: whwheoeo@uw.edu</string>
-    <string name="Developer2_info">Name: Edward Chung Email: edward92@uw.edu</string>
-    <string name="Developer1_info">Name: Tu Phan Email: dinhtu@uw.edu</string>
-<!--    <string name="Developer3_email">whwheoeo@uw.edu</string>-->
-<!--    <string name="Developer2_email">edward92@uw.edu</string>-->
-<!--    <string name="Developer1_email">dinhtu@uw.edu</string>-->
+    <string name="Developer3_info">Junghyon Jo \nwhwheoeo@uw.edu</string>
+    <string name="Developer2_info">Edward Chung \nedward92@uw.edu</string>
+    <string name="Developer1_info">Tu Phan \ndinhtu@uw.edu</string>
     <string name="Class_button">Class plan</string>
     <string name="Map_button">Campus Map</string>
     <string name="To_Apply">To Apply</string>
     <string name="To_Graduate">To Graduate</string>
     <string name="Class_Plan">Class Plan</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="edit_Add_Course_hint">Add Your Course</string>
     <string name="button_ADD">Add</string>
