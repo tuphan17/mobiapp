@@ -1,10 +1,13 @@
 package edu.tacoma.uw.projecttcss450;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ParkingActivity extends AppCompatActivity {
 
@@ -32,5 +35,29 @@ public class ParkingActivity extends AppCompatActivity {
         ListView listView = findViewById(R.id.parking_list);
         ParkingAdapter adapter = new ParkingAdapter(this, parkingLocations, parkingImages);
         listView.setAdapter(adapter);
+
+        //Bottom Navigation Bar
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+            int itemId = item.getItemId();
+            if (itemId == R.id.bottomNavHome) {
+                startActivity(new Intent(this, MainActivity.class));
+                return true;
+            } else if (itemId == R.id.bottomNavClassPlan) {
+                startActivity(new Intent(this, ClassPlanActivity.class));
+                return true;
+            } else if (itemId == R.id.bottomNavCampusMap) {
+                startActivity(new Intent(this, CampusMapActivity.class));
+                return true;
+            } else if (itemId == R.id.bottomNavParking) {
+                startActivity(new Intent(this, ParkingActivity.class));
+                return true;
+
+                // Add more cases for additional menu items
+            }
+            return false;
+        });
     }
+
+
 }
