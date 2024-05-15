@@ -27,6 +27,36 @@ public class ClassPlanActivity extends AppCompatActivity {
             return insets;
         });
 
+        String apply = getString(R.string.To_Apply);
+        String graduate = getString(R.string.To_Graduate);
+        String classPlan = getString(R.string.Class_Plan);
+
+        findViewById(R.id.ApplyButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri webpage = Uri.parse("http://students.washington.edu/whwheoeo/toApplyMajor.html");
+                Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
+                startActivity(webIntent);
+            }
+        });
+
+        findViewById(R.id.GraduationButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri webpage = Uri.parse("http://students.washington.edu/whwheoeo/toGraduation.html");
+                Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
+                startActivity(webIntent);
+            }
+        });
+
+        Button classButton = findViewById(R.id.myPlanButton);
+        classButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ClassPlanActivity.this, AddCourseActivity.class);
+                startActivity(intent);
+            }
+        });
         //Bottom Navigation Bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
