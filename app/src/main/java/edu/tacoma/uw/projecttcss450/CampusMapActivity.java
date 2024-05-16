@@ -28,6 +28,7 @@ public class CampusMapActivity extends AppCompatActivity {
 
         //Bottom Navigation Bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.bottomNavCampusMap);
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             int itemId = item.getItemId();
             if (itemId == R.id.bottomNavHome) {
