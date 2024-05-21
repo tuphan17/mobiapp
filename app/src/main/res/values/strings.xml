@@ -29,6 +29,7 @@
     <string name="edit_Add_Course_hint">Add Your Course</string>
     <string name="button_ADD">Add</string>
     <string name="edit_Delete_Course_hint">Delete Your Course</string>
+    <string name="edit_ADD_Year_hint">Add your Year</string>
     <string name="button_Delete">Delete</string>
     <string name="Fresh_button">Fresh man</string>
     <string name="Transfer_button">Transfer student</string>

@@ -2,64 +2,90 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/layout_root"
+    android:id="@+id/quater"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddCourse">
 
     <EditText
-        android:id="@+id/edit_message"
+        android:id="@+id/editYear"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="123dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:hint="@string/edit_ADD_Year_hint"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/editCourse1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editCourse1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="54dp"
         android:ems="10"
         android:hint="@string/edit_Add_Course_hint"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/edit_delete"
-        app:layout_constraintEnd_toStartOf="@+id/button_send"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button_send"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/button_ADD"
-        app:layout_constraintBaseline_toBaselineOf="@+id/edit_message"
+        app:layout_constraintBottom_toTopOf="@+id/editCourse2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/edit_message" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editYear" />
 
     <EditText
-        android:id="@+id/edit_delete"
+        android:id="@+id/editCourse2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="36dp"
         android:ems="10"
-        android:hint="@string/edit_Delete_Course_hint"
+        android:hint="@string/edit_Add_Course_hint"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toStartOf="@+id/button_send"
+        app:layout_constraintBottom_toTopOf="@+id/editCourse3"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/editCourse1" />
+
+    <EditText
+        android:id="@+id/editCourse3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="52dp"
+        android:ems="10"
+        android:hint="@string/edit_Add_Course_hint"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAddQuater"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCourse2" />
 
     <Button
-        android:id="@+id/button_delete"
+        android:id="@+id/buttonAddQuater"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/button_Delete"
-        app:layout_constraintBaseline_toBaselineOf="@+id/edit_delete"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="183dp"
+        android:text="@string/button_ADD"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/edit_message" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCourse3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
