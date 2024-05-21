@@ -28,4 +28,10 @@
     <string name="About_Information">This application goes through some of the basic information to guide freshman students in CS majors at University of Washington Tacoma.</string>
     <string name="login_text">LOGIN</string>
     <string name="register_navigate_text">Click here to Register!</string>
+    <string name="email_hint">Enter your email</string>
+    <string name="pwd_hint">Enter your password</string>
+    <string name="register_text">REGISTER</string>
+    <string name="LOGIN_PREFS">edu.tacoma.uw.dinhtu.authenticationpractice.PREFS</string>
+    <string name="LOGGEDIN">edu.tacoma.uw.dinhtu.authenticationpractice.PREFS</string>
+
 </resources>
