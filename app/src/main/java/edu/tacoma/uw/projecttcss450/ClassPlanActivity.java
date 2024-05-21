@@ -29,6 +29,7 @@ public class ClassPlanActivity extends AppCompatActivity {
 
         //Bottom Navigation Bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.bottomNavClassPlan);
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             int itemId = item.getItemId();
             if (itemId == R.id.bottomNavHome) {
@@ -79,5 +80,29 @@ public class ClassPlanActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //Bottom Navigation Bar
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+            int itemId = item.getItemId();
+            if (itemId == R.id.bottomNavHome) {
+                startActivity(new Intent(this, MainActivity.class));
+                return true;
+            } else if (itemId == R.id.bottomNavClassPlan) {
+                startActivity(new Intent(this, ClassPlanActivity.class));
+                return true;
+            } else if (itemId == R.id.bottomNavCampusMap) {
+                startActivity(new Intent(this, CampusMapActivity.class));
+                return true;
+            } else if (itemId == R.id.bottomNavParking) {
+                startActivity(new Intent(this, ParkingActivity.class));
+                return true;
+
+                // Add more cases for additional menu items
+            }
+            return false;
+        });
+
+
+
     }
 }
