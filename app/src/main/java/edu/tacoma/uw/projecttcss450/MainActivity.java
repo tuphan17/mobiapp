@@ -29,11 +29,11 @@ public class MainActivity extends AppCompatActivity {
         });
         mSharedPreferences = getSharedPreferences(getString(R.string.LOGIN_PREFS)
                 , Context.MODE_PRIVATE);
-        if (mSharedPreferences.getBoolean(getString(R.string.LOGGEDIN) , false)){
-            Intent i= new Intent(this,ClassPlanActivity.class);
-            startActivity(i);
-            finish();
-        }
+        //if (mSharedPreferences.getBoolean(getString(R.string.LOGGEDIN) , false)){
+        //    Intent i= new Intent(this,ClassPlanActivity.class);
+        //    startActivity(i);
+         //   finish();
+       // }
 
 
 
@@ -72,5 +72,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button loginButton = findViewById(R.id.loginButton);
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }

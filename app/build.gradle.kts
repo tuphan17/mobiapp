@@ -32,6 +32,7 @@ android {
 }
 
 dependencies {
+
     implementation("com.android.volley:volley:1.2.1")
     implementation(libs.appcompat)
     implementation(libs.material)
@@ -42,6 +43,8 @@ dependencies {
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
     implementation(libs.volley)
+    implementation ("androidx.navigation:navigation-fragment:2.4.2")
+    implementation ("androidx.navigation:navigation-ui:2.4.2")
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
