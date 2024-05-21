@@ -12,7 +12,8 @@ import java.util.List;
 
 import edu.tacoma.uw.projecttcss450.databinding.FragmentQuaterBinding;
 
-public class QuaterRecyclerViewAdapter extends RecyclerView.Adapter<QuaterRecyclerViewAdapter.ViewHolder>{
+public class QuaterRecyclerViewAdapter extends
+        RecyclerView.Adapter<QuaterRecyclerViewAdapter.ViewHolder>{
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;

@@ -86,7 +86,7 @@ public class QuaterViewModel extends AndroidViewModel {
                 mResponse::setValue,
                 this::handleError);
 
-        Log.i("quaterViewModel", request.getUrl().toString());
+        Log.i("QuaterViewModel", request.getUrl().toString());
         request.setRetryPolicy(new DefaultRetryPolicy(
                 10_000,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
@@ -103,11 +103,11 @@ public class QuaterViewModel extends AndroidViewModel {
 
     private void handleResult(final JSONObject result) {
         try {
-            String data = result.getString("quaters");
+            String data = result.getString("Quaters");
             JSONArray arr = new JSONArray(data);
             for (int i = 0; i < arr.length(); i++) {
                 JSONObject obj = arr.getJSONObject(i);
-                Quater quater = new Quater(obj.getString(Quater.Year),
+                Quater quater = new Quater(obj.getString(Quater.YEAR),
                         obj.getString(Quater.COURSE1),
                         obj.getString(Quater.COURSE2),
                         obj.getString(Quater.COURSE3));

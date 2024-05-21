@@ -12,7 +12,7 @@ public class Quater implements Serializable {
 
     private String mCourse3;
 
-    public final static String Year = "year";
+    public final static String YEAR = "year";
 
     public final static String COURSE1 = "course1";
 
