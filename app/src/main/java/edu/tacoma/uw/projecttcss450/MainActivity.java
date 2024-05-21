@@ -13,6 +13,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class MainActivity extends AppCompatActivity {
     private SharedPreferences mSharedPreferences;
     @Override
@@ -35,6 +37,30 @@ public class MainActivity extends AppCompatActivity {
          //   finish();
        // }
 
+
+
+        //Bottom Navigation Bar
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.bottomNavHome);
+        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+            int itemId = item.getItemId();
+            if (itemId == R.id.bottomNavHome) {
+                startActivity(new Intent(this, MainActivity.class));
+                return true;
+            } else if (itemId == R.id.bottomNavClassPlan) {
+                startActivity(new Intent(this, ClassPlanActivity.class));
+                return true;
+            } else if (itemId == R.id.bottomNavCampusMap) {
+                startActivity(new Intent(this, CampusMapActivity.class));
+                return true;
+            } else if (itemId == R.id.bottomNavParking) {
+                startActivity(new Intent(this, ParkingActivity.class));
+                return true;
+
+                // Add more cases for additional menu items
+            }
+            return false;
+        });
 
 
         Button parkingButton = findViewById(R.id.ParkingButton);

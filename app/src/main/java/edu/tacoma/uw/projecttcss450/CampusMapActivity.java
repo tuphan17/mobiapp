@@ -11,6 +11,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class CampusMapActivity extends AppCompatActivity {
 
     @Override
@@ -24,10 +26,47 @@ public class CampusMapActivity extends AppCompatActivity {
             return insets;
         });
 
+        //Bottom Navigation Bar
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.bottomNavCampusMap);
+        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+            int itemId = item.getItemId();
+            if (itemId == R.id.bottomNavHome) {
+                startActivity(new Intent(this, MainActivity.class));
+                return true;
+            } else if (itemId == R.id.bottomNavClassPlan) {
+                startActivity(new Intent(this, ClassPlanActivity.class));
+                return true;
+            } else if (itemId == R.id.bottomNavCampusMap) {
+                startActivity(new Intent(this, CampusMapActivity.class));
+                return true;
+            } else if (itemId == R.id.bottomNavParking) {
+                startActivity(new Intent(this, ParkingActivity.class));
+                return true;
+
+                // Add more cases for additional menu items
+            }
+            return false;
+        });
+
+        if (findViewById(R.id.CampusMapWeb) != null) {
+            if (savedInstanceState != null) {
+                return;
+            }
+
+            // Create an instance of CampusMapWebFragment
+            CampusMapWebFragment campusMapWebFragment = new CampusMapWebFragment();
+
+            // Add the fragment to the 'fragment_container' FrameLayout
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.CampusMapWeb, campusMapWebFragment)
+                    .commit();
+        }
+
         findViewById(R.id.clickherebutton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri webpage = Uri.parse("https://www.tacoma.uw.edu/campus-map");
+                Uri webpage = Uri.parse("https://www.tacoma.uw.edu/map/");
                 Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
                 startActivity(webIntent);
             }

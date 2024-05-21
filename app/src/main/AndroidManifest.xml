@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET" />
+=======
+    <uses-permission android:name="android.permission.INTERNET"/>
+>>>>>>> main
 
     <application
         android:allowBackup="true"
@@ -11,7 +15,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ProjectTCSS450"
+        android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
             android:name=".AddCourseActivity"
@@ -26,16 +30,13 @@
             android:name=".ToApplyActivity"
             android:exported="false" />
         <activity
+            android:name=".AddCourseActivity"
+            android:exported="false" />
+        <activity
             android:name=".ClassPlanActivity"
             android:exported="false" />
         <activity
-            android:name=".ClassPlan"
-            android:exported="false" />
-        <activity
             android:name=".ParkingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AboutMe"
             android:exported="false" />
         <activity
             android:name=".AboutActivity"
