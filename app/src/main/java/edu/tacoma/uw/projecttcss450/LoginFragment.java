@@ -108,7 +108,7 @@ public class LoginFragment extends Fragment {
                         // Navigate back to MainActivity
                         Intent intent = new Intent(getActivity(), MainActivity.class);
                         startActivity(intent);
-                        getActivity().finish(); // Optional: Finish the LoginActivity to prevent going back to it
+                        getActivity().finish();
                     } else {
                         Toast.makeText(this.getContext(), "User failed to authenticate", Toast.LENGTH_LONG).show();
                     }
