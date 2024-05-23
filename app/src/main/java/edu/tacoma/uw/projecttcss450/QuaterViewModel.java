@@ -103,17 +103,19 @@ public class QuaterViewModel extends AndroidViewModel {
 
     private void handleResult(final JSONObject result) {
         try {
-            String data = result.getString("Quaters");
-            JSONArray arr = new JSONArray(data);
-            for (int i = 0; i < arr.length(); i++) {
-                JSONObject obj = arr.getJSONObject(i);
-                Quater quater = new Quater(obj.getString(Quater.YEAR),
-                        obj.getString(Quater.COURSE1),
-                        obj.getString(Quater.COURSE2),
-                        obj.getString(Quater.COURSE3));
-                mQuaterList.getValue().add(quater);
+            if (result.has("Quaters")) {
+                String data = result.getString("Quaters");
+                JSONArray arr = new JSONArray(data);
+                for (int i = 0; i < arr.length(); i++) {
+                    JSONObject obj = arr.getJSONObject(i);
+                    String year = obj.optString(Quater.YEAR, "");
+                    String course1 = obj.optString(Quater.COURSE1, "");
+                    String course2 = obj.optString(Quater.COURSE2, "");
+                    String course3 = obj.optString(Quater.COURSE3, "");
+                    Quater quater = new Quater(year, course1, course2, course3);
+                    mQuaterList.getValue().add(quater);
+                }
             }
-
         } catch (JSONException e) {
             e.printStackTrace();
             Log.e("ERROR!", e.getMessage());

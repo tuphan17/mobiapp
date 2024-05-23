@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/bottomNavHome"
@@ -12,7 +12,6 @@
         android:icon="@drawable/ic_plan_black_24dp"
         android:title="@string/title_classPlan" />
 
-
     <item
         android:id="@+id/bottomNavCampusMap"
         android:icon="@drawable/ic_map_black_24dp"
@@ -23,6 +22,9 @@
         android:icon="@drawable/ic_parking_black_24dp"
         android:title="@string/title_parking" />
 
-
+    <item
+        android:id="@+id/action_logout"
+        android:title="@string/logout"
+        app:showAsAction="never" />
 
 </menu>

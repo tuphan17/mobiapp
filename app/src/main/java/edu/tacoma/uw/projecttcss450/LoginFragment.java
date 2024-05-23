@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import android.util.Log;
@@ -82,15 +83,18 @@ public class LoginFragment extends Fragment {
     }
 
     private void observeResponse(final JSONObject response) {
+        Log.d("LoginFragment", "Response received: " + response.toString());
         if (response.length() > 0) {
             if (response.has("error")) {
                 try {
+                    Log.e("LoginFragment", "Error Authenticating User: " + response.get("error"));
                     Toast.makeText(this.getContext(),
                             "Error Authenticating User: " +
                                     response.get("error"), Toast.LENGTH_LONG).show();
                     mBinding.errorLoginTextview.setText("User failed to authenticate");
 
                 } catch (JSONException e) {
+                    Log.e("LoginFragment", "JSON Parse Error: " + e.getMessage());
                     Log.e("JSON Parse Error", e.getMessage());
                     mBinding.errorLoginTextview.setText("User failed to authenticate");
                 }
@@ -98,26 +102,31 @@ public class LoginFragment extends Fragment {
             } else if (response.has("result")) {
                 try {
                     String result = (String) response.get("result");
+                    Log.d("LoginFragment", "Login result: " + result);
                     if (result.equals("success")) {
+                        Log.d("LoginFragment", "Login successful");
                         Toast.makeText(this.getContext(), "User logged in", Toast.LENGTH_LONG).show();
                         SharedPreferences sharedPreferences = getActivity().getSharedPreferences(getString(R.string.LOGIN_PREFS)
                                 , Context.MODE_PRIVATE);
                         sharedPreferences.edit().putBoolean(getString(R.string.LOGGEDIN), true)
                                 .commit();
 
-                        // Navigate back to MainActivity
-                        Intent intent = new Intent(getActivity(), MainActivity.class);
+                        // Start AddCourse fragment
+                        Intent intent = new Intent(getActivity(),AddCourseActivity.class);
                         startActivity(intent);
                         getActivity().finish();
                     } else {
+                        Log.d("LoginFragment", "User failed to authenticate");
                         Toast.makeText(this.getContext(), "User failed to authenticate", Toast.LENGTH_LONG).show();
                     }
                 } catch (JSONException e) {
+                    Log.e("LoginFragment", "JSON Parse Error: " + e.getMessage());
                     Log.e("JSON Parse Error", e.getMessage());
                 }
             }
 
         } else {
+            Log.d("LoginFragment", "No Response");
             Log.d("JSON Response", "No Response");
         }
     }
