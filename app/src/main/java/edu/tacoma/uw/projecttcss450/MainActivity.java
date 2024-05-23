@@ -20,34 +20,15 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     private SharedPreferences mSharedPreferences;
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.bottom_nav_menu, menu);
-        return true;
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int itemId = item.getItemId();
-        if (itemId == R.id.action_logout) {
-            logout();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
     private void logout() {
-        // Clear the saved login state from SharedPreferences
+        // Clear the login status in shared preferences
         SharedPreferences sharedPreferences = getSharedPreferences(getString(R.string.LOGIN_PREFS), Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putBoolean(getString(R.string.LOGGEDIN), false);
-        editor.apply();
+        sharedPreferences.edit().putBoolean(getString(R.string.LOGGEDIN), false).apply();
 
-        // Show a toast message
-        Toast.makeText(this, "Logged out successfully", Toast.LENGTH_SHORT).show();
-
-        // Navigate to the login activity or fragment
+        // Navigate to the login screen
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
-        finish(); // Optional: Finish the current activity to prevent going back to it using the back button
+        finish(); // Optional: finish the current activity to prevent going back to the main page
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +49,13 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
 
-
+        Button logoutButton = findViewById(R.id.logoutButton);
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                logout();
+            }
+        });
 
         //Bottom Navigation Bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);

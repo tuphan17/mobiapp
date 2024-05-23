@@ -106,15 +106,20 @@ public class LoginFragment extends Fragment {
                     if (result.equals("success")) {
                         Log.d("LoginFragment", "Login successful");
                         Toast.makeText(this.getContext(), "User logged in", Toast.LENGTH_LONG).show();
-                        SharedPreferences sharedPreferences = getActivity().getSharedPreferences(getString(R.string.LOGIN_PREFS)
-                                , Context.MODE_PRIVATE);
-                        sharedPreferences.edit().putBoolean(getString(R.string.LOGGEDIN), true)
-                                .commit();
+                        SharedPreferences sharedPreferences = getActivity().getSharedPreferences(getString(R.string.LOGIN_PREFS), Context.MODE_PRIVATE);
+                        sharedPreferences.edit().putBoolean(getString(R.string.LOGGEDIN), true).commit();
 
-                        // Start AddCourse fragment
-                        Intent intent = new Intent(getActivity(),AddCourseActivity.class);
+                        // Get the user's ID from the server response
+                        String userId = response.getString("userId");
+
+                        // Fetch the user's data
+                        mUserViewModel.fetchUserData(userId);
+
+                        // Start AddCourseActivity and pass the user's data
+                        Intent intent = new Intent(getActivity(), AddCourseActivity.class);
                         startActivity(intent);
                         getActivity().finish();
+
                     } else {
                         Log.d("LoginFragment", "User failed to authenticate");
                         Toast.makeText(this.getContext(), "User failed to authenticate", Toast.LENGTH_LONG).show();
