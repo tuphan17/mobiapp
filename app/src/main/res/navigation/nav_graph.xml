@@ -9,5 +9,27 @@
         android:id="@+id/addCourse"
         android:name="edu.tacoma.uw.projecttcss450.AddCourse"
         android:label="fragment_add_course"
-        tools:layout="@layout/fragment_add_course" />
+        tools:layout="@layout/fragment_add_course" >
+        <action
+            android:id="@+id/action_addCourse_to_quaterListFragment"
+            app:destination="@id/quaterListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quaterListFragment"
+        android:name="edu.tacoma.uw.projecttcss450.QuaterListFragment"
+        android:label="fragment_quater_list"
+        tools:layout="@layout/fragment_quater_list" >
+        <action
+            android:id="@+id/action_quaterListFragment_to_quaterDetailFragment"
+            app:destination="@id/quaterDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quaterDetailFragment"
+        android:name="edu.tacoma.uw.projecttcss450.QuaterDetailFragment"
+        android:label="fragment_quater_detail"
+        tools:layout="@layout/fragment_quater_detail" >
+        <argument
+            android:name="quater"
+            app:argType="edu.tacoma.uw.projecttcss450.Quater" />
+    </fragment>
 </navigation>

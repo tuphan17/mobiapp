@@ -26,16 +26,13 @@
             android:name=".ToApplyActivity"
             android:exported="false" />
         <activity
+            android:name=".AddCourseActivity"
+            android:exported="false" />
+        <activity
             android:name=".ClassPlanActivity"
             android:exported="false" />
         <activity
-            android:name=".ClassPlan"
-            android:exported="false" />
-        <activity
             android:name=".ParkingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AboutMe"
             android:exported="false" />
         <activity
             android:name=".AboutActivity"
