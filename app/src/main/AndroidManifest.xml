@@ -15,21 +15,6 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
-            android:name=".ShowQuaterListActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AddCourseActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AddClassActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MyCoursePlanActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ToApplyActivity"
-            android:exported="false" />
-        <activity
             android:name=".AddCourseActivity"
             android:exported="false" />
         <activity
