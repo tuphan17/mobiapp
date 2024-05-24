@@ -18,10 +18,18 @@
     <!-- Buttons -->
     <string name="Class_button">Class plan</string>
     <string name="Map_button">Campus Map</string>
+<<<<<<< HEAD
 
     <!-- Class Plan -->
     <string name="To_Apply">To Apply</string>
     <string name="To_Graduate">To Graduate</string>
+=======
+    <!-- Class Plan >-->
+    <string name="To_Apply">Apply Information</string>
+    <string name="To_Graduate">Graduate Information</string>
+    <string name="To_Add_Quarter">Add Quarter</string>
+    <string name="To_Display_Quarter">Show whole Quarter</string>
+>>>>>>> main
     <string name="Class_Plan">Class Plan</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="edit_Add_Course_hint">Add Your Course</string>

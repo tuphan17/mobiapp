@@ -97,6 +97,5 @@ public class ClassPlanActivity extends AppCompatActivity {
         });
 
 
-
     }
 }

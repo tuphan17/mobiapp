@@ -1,5 +1,6 @@
 package edu.tacoma.uw.projecttcss450;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.service.autofill.UserData;
 import android.util.Log;
@@ -12,6 +13,8 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.lifecycle.ViewModelProvider;
 
 import java.util.List;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class AddCourseActivity extends AppCompatActivity {
     private UserViewModel mUserViewModel;
@@ -37,7 +40,31 @@ public class AddCourseActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        //Bottom Navigation Bar
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.bottomNavCampusMap);
+        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+            int itemId = item.getItemId();
+            if (itemId == R.id.bottomNavHome) {
+                startActivity(new Intent(this, MainActivity.class));
+                return true;
+            } else if (itemId == R.id.bottomNavClassPlan) {
+                startActivity(new Intent(this, ClassPlanActivity.class));
+                return true;
+            } else if (itemId == R.id.bottomNavCampusMap) {
+                startActivity(new Intent(this, CampusMapActivity.class));
+                return true;
+            } else if (itemId == R.id.bottomNavParking) {
+                startActivity(new Intent(this, ParkingActivity.class));
+                return true;
+
+                // Add more cases for additional menu items
+            }
+            return false;
+        });
     }
+
     private void onUserDataReceived(UserPlan userData) {
         // Get the user's quarters and courses
         List<Quater> quarters = userData.getQuarters();
@@ -63,4 +90,5 @@ public class AddCourseActivity extends AppCompatActivity {
             Log.d("UserData", courseInfo);
         }
     }
+
 }

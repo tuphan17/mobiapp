@@ -17,7 +17,6 @@
         <activity
             android:name=".AddCourseActivity"
             android:exported="false" />
-
         <activity
             android:name=".ClassPlanActivity"
             android:exported="false" />
