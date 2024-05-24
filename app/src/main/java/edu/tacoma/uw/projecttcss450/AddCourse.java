@@ -36,6 +36,7 @@ public class AddCourse extends Fragment {
         quaterViewModel = new ViewModelProvider(getActivity()).get(QuaterViewModel.class);
 
         mBinding = FragmentAddCourseBinding.inflate(inflater, container, false);
+
         return mBinding.getRoot();
     }
 
@@ -53,7 +54,7 @@ public class AddCourse extends Fragment {
 
         mBinding.buttonAddQuater.setOnClickListener(button -> processAddAnimal());
 
-
+        mBinding.ViewQuaterButton.setOnClickListener(button -> Navigation.findNavController(getView()).navigate(R.id.action_addCourse_to_quaterListFragment));
 
     }
 
