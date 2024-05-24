@@ -12,6 +12,7 @@
         android:layout_width="140dp"
         android:layout_height="50dp"
         android:layout_marginStart="140dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="140dp"
         android:text="Parking"
         app:layout_constraintBottom_toTopOf="@+id/ClassPlanButton"
@@ -25,6 +26,7 @@
         android:layout_width="140dp"
         android:layout_height="50dp"
         android:layout_marginStart="140dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="140dp"
         android:text="@string/Class_button"
         app:layout_constraintBottom_toTopOf="@+id/CampusMapButton"
@@ -37,11 +39,12 @@
         android:layout_width="140dp"
         android:layout_height="50dp"
         android:layout_marginStart="140dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="140dp"
         android:text="@string/Map_button"
         app:layout_constraintBottom_toTopOf="@+id/AboutButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ClassPlanButton" />
 
@@ -50,25 +53,14 @@
         android:layout_width="140dp"
         android:layout_height="50dp"
         android:layout_marginStart="140dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="140dp"
-        android:layout_marginBottom="22dp"
+        android:layout_marginBottom="94dp"
         android:text="About"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CampusMapButton" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="388dp"
-        android:layout_height="255dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginEnd="18dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/coolpicutre" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -83,6 +75,16 @@
         app:labelVisibilityMode="labeled"
         app:menu="@menu/bottom_nav_menu" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="411dp"
+        android:layout_height="239dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logofinal" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
