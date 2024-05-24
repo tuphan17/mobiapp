@@ -17,15 +17,7 @@
         <activity
             android:name=".AddCourseActivity"
             android:exported="false" />
-        <activity
-            android:name=".AddClassActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MyCoursePlanActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ToApplyActivity"
-            android:exported="false" />
+
         <activity
             android:name=".ClassPlanActivity"
             android:exported="false" />

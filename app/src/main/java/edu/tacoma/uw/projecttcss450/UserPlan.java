@@ -34,4 +34,10 @@ public class UserPlan implements Serializable {
 
     public void setCourses(List<Course> courses) {
     }
+
+    public void setUserId(int userId) {
+    }
+
+    public void setEmail(String email) {
+    }
 }

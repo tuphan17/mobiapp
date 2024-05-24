@@ -15,7 +15,6 @@
             app:destination="@id/quaterListFragment" />
     </fragment>
 
-
     <fragment
         android:id="@+id/loginFragment"
         android:name="edu.tacoma.uw.projecttcss450.LoginFragment"

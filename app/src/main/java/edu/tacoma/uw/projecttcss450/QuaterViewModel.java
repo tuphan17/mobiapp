@@ -68,7 +68,7 @@ public class QuaterViewModel extends AndroidViewModel {
     }
 
     public void addQuater(String year, String course1, String course2, String course3) {
-        String url = "http://students.washington.edu/whwheoeo/add_quater.php";
+        String url = "https://students.washington.edu/whwheoeo/add_quater.php";
         JSONObject body = new JSONObject();
         try {
             body.put("year", year);
@@ -127,7 +127,7 @@ public class QuaterViewModel extends AndroidViewModel {
 
         String url =
 
-                "http://students.washington.edu/whwheoeo/get_quater.php";
+                "https://students.washington.edu/whwheoeo/get_quater.php";
 
         Request request = new JsonObjectRequest(
 
