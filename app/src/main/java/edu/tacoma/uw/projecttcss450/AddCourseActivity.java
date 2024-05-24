@@ -26,7 +26,7 @@ public class AddCourseActivity extends AppCompatActivity {
 
         //Bottom Navigation Bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        bottomNavigationView.setSelectedItemId(R.id.bottomNavCampusMap);
+        bottomNavigationView.setSelectedItemId(R.id.bottomNavClassPlan);
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             int itemId = item.getItemId();
             if (itemId == R.id.bottomNavHome) {
