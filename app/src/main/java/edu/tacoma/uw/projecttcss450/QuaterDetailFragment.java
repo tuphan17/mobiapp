@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,6 +46,9 @@ public class QuaterDetailFragment extends Fragment {
 
     //Method for opening email app with quarter detail.
     private void sendEmail() {
+        AuthViewModel authViewModel = new ViewModelProvider(requireActivity()).get(AuthViewModel.class);
+        String userEmail = authViewModel.getUser().getEmail();
+
         String year = mBinding.yearTextView.getText().toString();
         String course1 = mBinding.course1TextView.getText().toString();
         String course2 = mBinding.course2TextView.getText().toString();
@@ -55,17 +59,17 @@ public class QuaterDetailFragment extends Fragment {
                 "Course 2: " + course2 + "\n" +
                 "Course 3: " + course3;
 
-        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                "mailto", "", null));
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+        emailIntent.setData(Uri.parse("mailto:")); // Only email apps should handle this
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{userEmail});
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Your Quarter/Classes");
         emailIntent.putExtra(Intent.EXTRA_TEXT, emailBody);
 
         try {
-            startActivity(Intent.createChooser(emailIntent, ""));
+            startActivity(Intent.createChooser(emailIntent, "Send email..."));
         } catch (android.content.ActivityNotFoundException ex) {
             Toast.makeText(getContext(), "No email clients installed.", Toast.LENGTH_SHORT).show();
         }
-
 
     }
 }
