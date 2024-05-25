@@ -73,8 +73,9 @@ public class AddCourse extends Fragment {
 
 
         Log.i(TAG, "Data is " + year + ", " + course1 + ", " + course2+ ", " + course3);
-
-        quaterViewModel.addQuater(year, course1, course2, course3);
+        AuthViewModel authViewModel = new ViewModelProvider(requireActivity()).get(AuthViewModel.class);
+        int userId = authViewModel.getUser().getUserId();
+        quaterViewModel.addQuater(year, course1, course2, course3,userId);
 
 
 

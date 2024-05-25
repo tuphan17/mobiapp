@@ -26,6 +26,7 @@ import java.util.Objects;
 
 public class QuaterViewModel extends AndroidViewModel {
 
+    private UserManager userManager;
     private MutableLiveData<JSONObject> mResponse;
 
     private MutableLiveData<List<Quater>> mQuaterList;
@@ -36,8 +37,10 @@ public class QuaterViewModel extends AndroidViewModel {
         mResponse.setValue(new JSONObject());
         mQuaterList = new MutableLiveData<>();
         mQuaterList.setValue(new ArrayList<>());
+        userManager = new UserManager(application);
 
     }
+
 
     public void addResponseObserver(@NonNull LifecycleOwner owner,
                                     @NonNull Observer<? super JSONObject> observer) {
@@ -67,18 +70,25 @@ public class QuaterViewModel extends AndroidViewModel {
         }
     }
 
-    public void addQuater(String year, String course1, String course2, String course3) {
-        String url = "https://students.washington.edu/whwheoeo/add_quater.php";
+    public void addQuater(String year, String course1, String course2, String course3,int userId) {
+        String url = "https://students.washington.edu/dinhtu/add_quater.php";
+        if (userManager != null) {
+            userManager.addQuarter(year, course1, course2, course3, userId);
+        } else {
+            // Handle the case when userManager is null
+            Log.e("QuaterViewModel", "UserManager is null");
+        }
         JSONObject body = new JSONObject();
         try {
             body.put("year", year);
             body.put("course1", course1);
             body.put("course2", course2);
             body.put("course3", course3);
+            body.put("userId", userId);
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
+        userManager.addQuarter(year, course1, course2, course3, userId);
         Request request = new JsonObjectRequest(
                 Request.Method.POST,
                 url,
@@ -94,6 +104,7 @@ public class QuaterViewModel extends AndroidViewModel {
         //Instantiate the RequestQueue and add the request to the queue
         Volley.newRequestQueue(getApplication().getApplicationContext())
                 .add(request);
+
     }
 
     public void addQuaterListObserver(@NonNull LifecycleOwner owner,
@@ -111,9 +122,9 @@ public class QuaterViewModel extends AndroidViewModel {
                         obj.getString(Quater.COURSE1),
                         obj.getString(Quater.COURSE2),
                         obj.getString(Quater.COURSE3));
+                quater.setUserId(obj.getInt("userId")); // Set the user ID for the quarter
                 mQuaterList.getValue().add(quater);
             }
-
         } catch (JSONException e) {
             e.printStackTrace();
             Log.e("ERROR!", e.getMessage());
@@ -121,11 +132,9 @@ public class QuaterViewModel extends AndroidViewModel {
         mQuaterList.setValue(mQuaterList.getValue());
     }
 
-    public void getQuaters() {
+    public void getQuaters(int userId) {
 
-        String url =
-
-                "https://students.washington.edu/whwheoeo/get_quater.php";
+        String url = "https://students.washington.edu/dinhtu/get_quater.php?userId=" + userId;
 
         Request request = new JsonObjectRequest(
 

@@ -7,9 +7,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import edu.tacoma.uw.projecttcss450.databinding.FragmentQuaterListBinding;
 
@@ -17,14 +21,14 @@ import edu.tacoma.uw.projecttcss450.databinding.FragmentQuaterListBinding;
  * create an instance of this fragment.
  */
 public class QuaterListFragment extends Fragment {
-
-    private QuaterViewModel mModel;
+    private AuthViewModel authViewModel;
+    private QuaterViewModel quaterViewModel;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mModel = new ViewModelProvider(getActivity()).get(QuaterViewModel.class);
-        mModel.getQuaters();
+        authViewModel = new ViewModelProvider(requireActivity()).get(AuthViewModel.class);
+        quaterViewModel = new ViewModelProvider(requireActivity()).get(QuaterViewModel.class);
     }
 
     @Override
@@ -37,14 +41,19 @@ public class QuaterListFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        FragmentQuaterListBinding binding = FragmentQuaterListBinding.bind(view);
 
-        @NonNull FragmentQuaterListBinding binding = FragmentQuaterListBinding.bind(getView());
+        int userId = authViewModel.getUser().getUserId();
 
-        mModel.addQuaterListObserver(getViewLifecycleOwner(), quaterList -> {
+        quaterViewModel.getQuaters(userId);
+
+        quaterViewModel.addQuaterListObserver(getViewLifecycleOwner(), quaterList -> {
+            Log.d("QuaterListFragment", "Received quaterList: " + quaterList);
             if (!quaterList.isEmpty()) {
-                binding.layoutRoot.setAdapter(
-                        new QuaterRecyclerViewAdapter(quaterList)
-                );
+                QuaterRecyclerViewAdapter adapter = new QuaterRecyclerViewAdapter(quaterList);
+                binding.recyclerView.setAdapter(adapter);
+            } else {
+                Log.d("QuaterListFragment", "QuaterList is empty");
             }
         });
     }

@@ -3,7 +3,7 @@ package edu.tacoma.uw.projecttcss450;
 import java.io.Serializable;
 
 public class Quater implements Serializable {
-
+    private int userId; // Add this field
     private String mYear;
 
     private String mCourse1;
@@ -12,6 +12,13 @@ public class Quater implements Serializable {
 
     private String mCourse3;
 
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
     public final static String YEAR = "year";
 
     public final static String COURSE1 = "course1";
