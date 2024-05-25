@@ -1,6 +1,7 @@
 /*
 This class is an activity class
 This holds fragments of login, adding classes, and displaying classes.
+This also uses SharedPreferences to keep users logged in.
  */
 package edu.tacoma.uw.projecttcss450;
 
