@@ -63,6 +63,7 @@ public class LoginFragment extends Fragment {
     private void storeUserData(int userId, JSONArray courses) {
         SharedPreferences sharedPreferences = requireActivity().getSharedPreferences("user_data", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean("is_logged_in", true);
 
         // Store the user's ID
         editor.putInt("user_id", userId);
