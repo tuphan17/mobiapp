@@ -57,7 +57,7 @@ public class ClassPlanActivity extends AppCompatActivity {
         findViewById(R.id.ApplyButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri webpage = Uri.parse("http://students.washington.edu/whwheoeo/toApplyMajor.html");
+                Uri webpage = Uri.parse("https://students.washington.edu/whwheoeo/toApplyMajor.html");
                 Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
                 startActivity(webIntent);
             }
@@ -66,7 +66,7 @@ public class ClassPlanActivity extends AppCompatActivity {
         findViewById(R.id.GraduationButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri webpage = Uri.parse("http://students.washington.edu/whwheoeo/toGraduation.html");
+                Uri webpage = Uri.parse("https://students.washington.edu/whwheoeo/toGraduation.html");
                 Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
                 startActivity(webIntent);
             }

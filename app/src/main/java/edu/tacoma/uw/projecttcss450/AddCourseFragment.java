@@ -22,7 +22,7 @@ import edu.tacoma.uw.projecttcss450.databinding.FragmentAddCourseBinding;
 /**
  * create an instance of this fragment.
  */
-public class AddCourse extends Fragment {
+public class AddCourseFragment extends Fragment {
 
     private FragmentAddCourseBinding mBinding;
 

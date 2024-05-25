@@ -5,7 +5,7 @@
     android:id="@+id/quater"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddCourse">
+    tools:context=".AddCourseFragment">
 
     <EditText
         android:id="@+id/editYear"

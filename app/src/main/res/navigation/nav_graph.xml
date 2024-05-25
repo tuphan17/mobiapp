@@ -30,7 +30,7 @@
 
     <fragment
         android:id="@+id/addCourse"
-        android:name="edu.tacoma.uw.projecttcss450.AddCourse"
+        android:name="edu.tacoma.uw.projecttcss450.AddCourseFragment"
         android:label="fragment_add_course"
         tools:layout="@layout/fragment_add_course">
         <action
