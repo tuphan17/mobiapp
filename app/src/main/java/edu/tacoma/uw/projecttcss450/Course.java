@@ -1,3 +1,6 @@
+/*
+This class takes care of Courses.
+ */
 package edu.tacoma.uw.projecttcss450;
 
 public class Course {

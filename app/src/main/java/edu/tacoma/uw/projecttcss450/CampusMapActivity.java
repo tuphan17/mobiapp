@@ -1,3 +1,7 @@
+/*
+This class is an activity class
+Holds fragment of interactable campus map, and a button to open in browser.
+ */
 package edu.tacoma.uw.projecttcss450;
 
 import android.content.Intent;

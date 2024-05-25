@@ -1,3 +1,7 @@
+/*
+This class is an activity class
+Shows developer information
+ */
 package edu.tacoma.uw.projecttcss450;
 
 import android.os.Bundle;

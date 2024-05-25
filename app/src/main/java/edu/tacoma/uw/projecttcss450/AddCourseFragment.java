@@ -1,3 +1,7 @@
+/*
+This class is an fragment class
+Takes Quarter year, 3 courses and stores inside database.
+ */
 package edu.tacoma.uw.projecttcss450;
 
 import android.os.Bundle;

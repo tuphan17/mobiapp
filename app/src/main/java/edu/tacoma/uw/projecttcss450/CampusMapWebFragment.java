@@ -1,3 +1,7 @@
+/*
+This class is an fragment class
+Shows a webpage with interactive map.
+ */
 package edu.tacoma.uw.projecttcss450;
 
 import android.os.Bundle;
@@ -20,7 +24,6 @@ public class CampusMapWebFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_campus_map_web, container, false);
         webView = view.findViewById(R.id.CampusMapWeb);
         webView.getSettings().setJavaScriptEnabled(true);

@@ -1,3 +1,6 @@
+/*
+This class holds information about data needed in AddCourseActivity.
+ */
 package edu.tacoma.uw.projecttcss450;
 
 import java.io.Serializable;

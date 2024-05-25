@@ -1,3 +1,6 @@
+/*
+This class is an adapter for parking activity.
+ */
 package edu.tacoma.uw.projecttcss450;
 
 import android.content.Context;

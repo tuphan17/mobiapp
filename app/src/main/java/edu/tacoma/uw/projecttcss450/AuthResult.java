@@ -1,3 +1,6 @@
+/*
+This class takes care of authorization.
+ */
 package edu.tacoma.uw.projecttcss450;
 
 import org.json.JSONArray;

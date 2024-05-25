@@ -1,3 +1,6 @@
+/*
+This class holds information of users used in authentication.
+ */
 package edu.tacoma.uw.projecttcss450;
 
 import java.util.ArrayList;

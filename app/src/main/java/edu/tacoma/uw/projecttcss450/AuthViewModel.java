@@ -1,3 +1,6 @@
+/*
+This class takes care of authorization view model
+ */
 package edu.tacoma.uw.projecttcss450;
 
 import android.app.Application;

@@ -1,3 +1,6 @@
+/*
+This class is an adapter to store information into recycler view.
+ */
 package edu.tacoma.uw.projecttcss450;
 
 import android.view.LayoutInflater;

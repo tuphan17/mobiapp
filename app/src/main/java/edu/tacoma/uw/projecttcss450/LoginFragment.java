@@ -1,3 +1,7 @@
+/*
+This class is an fragment class
+Shows Login, password fields, and two buttons for login and register.
+ */
 package edu.tacoma.uw.projecttcss450;
 
 import android.content.Context;

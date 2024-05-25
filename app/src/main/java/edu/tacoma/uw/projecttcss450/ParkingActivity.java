@@ -1,3 +1,7 @@
+/*
+This class is an activity class
+Holds list of parking areas.
+ */
 package edu.tacoma.uw.projecttcss450;
 
 import android.content.Intent;

@@ -1,3 +1,7 @@
+/*
+This class is an activity class
+This class navigates to 2 web links, and to AddCourseActivity
+ */
 package edu.tacoma.uw.projecttcss450;
 
 import android.content.Intent;

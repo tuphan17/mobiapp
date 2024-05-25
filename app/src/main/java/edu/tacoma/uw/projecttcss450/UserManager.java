@@ -1,3 +1,6 @@
+/*
+This class manages users to corresponding databases.
+ */
 package edu.tacoma.uw.projecttcss450;
 
 import android.content.Context;

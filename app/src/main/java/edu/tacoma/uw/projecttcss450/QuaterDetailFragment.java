@@ -1,3 +1,8 @@
+/*
+This class is a fragment class
+Fetches the Course data from the database to show.
+Added ContentSharing to send output data to email app.
+ */
 package edu.tacoma.uw.projecttcss450;
 
 import android.content.Intent;

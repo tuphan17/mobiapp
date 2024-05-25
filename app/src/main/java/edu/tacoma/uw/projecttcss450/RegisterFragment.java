@@ -1,3 +1,7 @@
+/*
+This class is a fragment class
+Holds Email, Password fields, and a register button.
+ */
 package edu.tacoma.uw.projecttcss450;
 
 import android.os.Bundle;

@@ -1,3 +1,6 @@
+/*
+This class interacts with the database to add or fetch information.
+ */
 package edu.tacoma.uw.projecttcss450;
 
 import android.app.Application;

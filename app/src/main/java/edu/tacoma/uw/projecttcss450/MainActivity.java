@@ -1,3 +1,8 @@
+/*
+This class is an activity class
+Navigates to Activities :
+Parking, CampusMap, About, AddCourse
+ */
 package edu.tacoma.uw.projecttcss450;
 
 import android.content.Intent;

@@ -1,3 +1,7 @@
+/*
+This class is an activity class
+This holds fragments of login, adding classes, and displaying classes.
+ */
 package edu.tacoma.uw.projecttcss450;
 
 import android.content.Intent;

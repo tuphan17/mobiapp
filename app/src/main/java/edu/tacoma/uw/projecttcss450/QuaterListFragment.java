@@ -1,3 +1,7 @@
+/*
+This class is a fragment class
+Holds recycler view to show information.
+ */
 package edu.tacoma.uw.projecttcss450;
 
 import android.os.Bundle;
