@@ -7,18 +7,24 @@ This application goes through some of the basic information to guide freshman st
 Key Features
 * Main Page
    * Logo for our group (Group 11)
-   * Image of UWT stairways.
-   * Buttons redirecting to the activities below.  
-* Campus Map
-   * A map image of the whole campus for a quick view(Awaiting Zoom implementation).
-   * A link to the UWT official website for more detailed information.
+   * Buttons redirecting to the activities below.
+   * Bottom Navigation Bar for easier navigation on all activities.
 * Parking Information
    * List of parking areas.
-   * Link to Google Map to the corresponding parking area.
+   * Link to Google Map Application to the corresponding parking area.
 * Class Plan
    * Button to link to UWT website showing prerequisite courses to enroll in to CS major.
    * Button to link to UWT website showing classes required to graduate (CS major)
-   * Button to redirect to class plan activity, to add/remove classes. Showing frame layout of classes chosen from the user(Not implemented yet).  
+   * Button to redirect to class plans.
+   * Authentication to add/fetch classes from the database. (Login is required) (Registration button active)
+   * Page to add Quarter information, and 3 classes to the database.
+   * View all classes button to navigate directly to previously added Quarters.
+   * Recyclerview to show all QuarterYear.
+   * Click the QuarterYear to see details of classes.
+   * Send the data to Email.
+* Campus Map
+   * A layout to hold a webview of interactive map.
+   * A button to link to the website. (https://www.tacoma.uw.edu/map)
 * About Page
    * Our teamLogo.
    * Brief information about the application.
