@@ -1,5 +1,6 @@
-Overview
-This application goes through some of the basic information to guide freshman students in CS majors at University of Washington Tacoma.
+urUW
+urUW application goes through some of the basic information to guide freshman students in CS majors at University of Washington Tacoma.
+urUW also allows students to add classes for each quarter to plan ahead.
 
 
 
