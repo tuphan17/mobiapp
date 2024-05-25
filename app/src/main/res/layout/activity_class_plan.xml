@@ -9,24 +9,23 @@
 
     <Button
         android:id="@+id/ApplyButton"
-        android:layout_width="209dp"
-        android:layout_height="85dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:layout_marginStart="160dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="160dp"
-        android:layout_marginBottom="66dp"
         android:text="@string/To_Apply"
-        app:layout_constraintBottom_toTopOf="@+id/GraduationButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <Button
         android:id="@+id/GraduationButton"
-        android:layout_width="218dp"
-        android:layout_height="77dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:layout_marginStart="160dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="160dp"
         android:layout_marginBottom="83dp"
         android:text="@string/To_Graduate"
@@ -37,13 +36,12 @@
 
     <Button
         android:id="@+id/myPlanButton"
-        android:layout_width="202dp"
-        android:layout_height="69dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:layout_marginStart="160dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="160dp"
-        android:layout_marginBottom="211dp"
         android:text="@string/To_Add_Quarter"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/GraduationButton" />
@@ -61,11 +59,10 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="326dp"
-        android:layout_height="192dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/ApplyButton"
+        android:layout_width="409dp"
+        android:layout_height="328dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

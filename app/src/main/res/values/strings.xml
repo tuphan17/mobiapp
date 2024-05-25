@@ -24,7 +24,7 @@
     <!-- Class Plan >-->
     <string name="To_Apply">Apply Information</string>
     <string name="To_Graduate">Graduate Information</string>
-    <string name="To_Add_Quarter">Add Quarter</string>
+    <string name="To_Add_Quarter">Add/View Quarter</string>
     <string name="To_Display_Quarter">View All Classes</string>
     <string name="Class_Plan">Class Plan</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
